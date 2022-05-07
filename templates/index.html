@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Emotion Recognition</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1 {font-family: "Courier New", monospace}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('https://images.unsplash.com/photo-1483401757487-2ced3fa77952?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+</style>
+</head>
+<body>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-topmiddle">
+    <h1 class="w3-jumbo w3-animate-top">Emotion&nbsp;Detection</h1>
+    <hr class="w3-border-grey" style="margin:auto;width:70%">
+    <br>
+    <p style="text-align:center;">
+    	<img src="{{ url_for('video_feed') }}" width="95%">
+    </p>
+  </div>
+  <div class="w3-display-bottomleft w3-padding-large">
+    Created by: <a href="https://github.com/KOrfanakis" target="_blank">K. Orfanakis</a>
+  </div>
+</div>
+
+</body>
+</html>
