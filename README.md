@@ -1,14 +1,16 @@
 # Emotion Recognition Web Application with Keras, OpenCV, and Flask
 
 <p align="center">
-  <img src="images/Intro.gif" style="width: 400px;"/>
+  <img src="images/Intro.gif" style="width: 300px;"/>
 </p>
 
 **Table of Contents**:
 
 <!--ts-->
-- [Introduction](#introduction)
 - [Overview](#overview)
+- [Emotion Recognition](#emotion-recognition)
+- [Business Objective](#business-objective)
+- [Project Summary](#project-summary)
 - [Data](#data)
 - [Running the App](#running-the-app)
 - [References](#references)
@@ -17,7 +19,7 @@
 
 <br>
 
-## Introduction
+## Overview
 
 In this project, we will create a web app that detects human faces in a frame (image or video) and classifies them based on emotion. The project consists of three main sections:
 
@@ -33,7 +35,27 @@ In this project, we will create a web app that detects human faces in a frame (i
 
 <br>
 
-## Overview:
+## Emotion Recognition
+
+Facial Emotion Recognition (FER) is the process of detecting displayed human emotions using artificial intelligence based technologies in order to evaluate non-verbal responses to products, services or goods.
+
+This is important, as computer systems can adapt their responses and behavioural patterns according to the emotions of humans, thus making the interaction more natural. One application can be found in an automatic tutoring system, where the system adjusts the level of the tutorial depending on the user's affective state, such as excitement or boredom.
+
+Additionally, businesses can use FER to gain additional feedback on products and services. Using facial emotion recognition can aid in understanding which emotions a user is experiencing in real-time. This is a great addition to verbal feedback as it provides a more complex review of the user experience.
+Consequently, FER has been an active field of computer vision and has use cases across a variety of industries, such as healthcare, marketing, manufacturing, etc.
+
+<br>
+
+## Business Objective
+
+We are hired as data scientists by an advertising company, specialising in electronic boards at football matches. The company wants to develop software that detects fan’s faces, estimates their emotion, and adjusts ads based on the collective emotion.
+
+Our task is to develop a Deep Learning model that implements emotion recognition and integrates it with a face detection algorithm. The final product shall be delivered as a web application that accepts live video as input. The company will then integrate our product with their systems for automatic ad renewal according to the change of emotions during football games.
+
+
+<br>
+
+## Project Summary
 
 ###	**1. Building and Training a CNN** <br>
 
