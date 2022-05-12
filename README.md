@@ -11,6 +11,9 @@
 - [Emotion Recognition](#emotion-recognition)
 - [Business Objective](#business-objective)
 - [Project Summary](#project-summary)
+  - [1. Building and Training a CNN](#1-building-and-training-a-cnn)
+  - [2. Face Detection](#2-face-detection)
+  - [3. Hosting the App](#3-hosting-the-app)
 - [Data](#data)
 - [Running the App](#running-the-app)
 - [References](#references)
@@ -31,7 +34,7 @@ In this project, we will create a web app that detects human faces in a frame (i
 
 **→ Skills**: *Image Classification with Convolutional Neural Networks, Computer Vision (Face Detection), Model Deployment, Data Visualisation, Data Augmentation* <br>
 **→ Technologies**: *Python, Jupyter Notebook, Google Colab* <br>
-**→ Libraries**: *Keras, Tensorflow, Flask, OpenCV(cv2), Scikit-learn, Numpy, Matplotlib, Seaborn* <br>
+**→ Libraries**: *Keras, Tensorflow, Flask, OpenCV (cv2), Scikit-learn, Numpy, Matplotlib, Seaborn* <br>
 
 <br>
 
@@ -57,25 +60,27 @@ Our task is to develop a Deep Learning model that implements emotion recognition
 
 ## Project Summary
 
-###	**1. Building and Training a CNN** <br>
+###	1. Building and Training a CNN
 
-This section is performed entirely in the Jupyter notebook run on Google Colab. It contains the usual steps in training a DNN model: loading the data, performing data augmentation, creating, compiling, and training the model, and using the trained model to make predictions. A schematic illustration of the model’s architecture is shown below. The model achieves aproximately 69% accuracy across all labels/emotions. For a more detailed breakdown of the model's performance, please refer to the notebook. 
+This section is performed entirely in the [Jupyter notebook](https://github.com/KOrfanakis/Emotion_Recognition_Deep_Learning_App/blob/main/Emotion_Recognition_Notebook.ipynb) run on Google Colab. It contains the usual steps in training a DNN model: loading the data, performing data augmentation, creating, compiling, and training the model, and using the trained model to make predictions. The dataset used to train the CNN is the FER2013 dataset (more details are provided in the [Data](#data) section). A schematic illustration of the model’s architecture is shown below, while a more detailed summary (as produced by the `summary()` method) is included in the [images folder](https://github.com/KOrfanakis/Emotion_Recognition_Deep_Learning_App/blob/main/images/CNN_Architecture_Summary.png).
 
 <p align="center">
   <img src="images/CNN_Architecture.svg" style="width: 700px;"/>
 </p>
 
+The model achieves **aproximately 69.5% (validation) accuracy** across all labels/emotions, beating the **baseline human-level accuracy of ~65%**. For a more detailed breakdown of the model's performance, please refer to the [Assessing Performance](https://github.com/KOrfanakis/Emotion_Recognition_Deep_Learning_App/blob/main/Emotion_Recognition_Notebook.ipynb) section of the Jupyter notebook. 
+
 <br>
 
-###	**2. Face Detection** <br>
+###	2. Face Detection
 
 This part of the project will be implemented using [Haar Cascades](https://docs.opencv.org/3.4/db/d28/tutorial_cascade_classifier.html) and [OpenCV](https://opencv.org/). A Haar classifier, or a Haar cascade classifier, is an object detection program that identifies objects in an image or video. The OpenCV library maintains a repository of pre-trained Haar cascades. For this project, we only need the `haarcascade_frontalface_default.xml` file, which detects the front of human faces.
 
 <br>
 
-### **3. Hosting the App** <br>
+### 3. Hosting the App
 
-Lastly, we will use Python’s [Flask](https://flask.palletsprojects.com/en/2.1.x/) web framework to host our application in a browser. For this purpose, the [`app.py`](https://github.com/KOrfanakis/Emotion_Recognition_Deep_Learning_App/blob/main/app.py) file loads the CNN model and the Haar cascade classifier, detects a face and uses the model to predict its emotion.
+Lastly, we will use Python’s [Flask](https://flask.palletsprojects.com/en/2.1.x/) web framework to host our application in a browser. For this purpose, the [`app.py`](https://github.com/KOrfanakis/Emotion_Recognition_Deep_Learning_App/blob/main/app.py) file loads the CNN model and the Haar cascade classifier, detects a face and uses the model to predict its emotion. The HTML document used to create the web app is included in the templates folder. Instructions on how to run the web app are provided in the [Running the App](#running-the-app) section.
 
 <br>
 
@@ -95,11 +100,19 @@ The dataset is extracted from Kaggle through [this link](jonathanoheix/face-expr
 
 ## Running the App
 
-The most straightforward way to launch the Flask app is to run it locally. The most straightforward way to launch the Flask app is to run it locally. First, open a command-line prompt and navigate to the project’s directory and run the following commands:
+The most straightforward way to launch the Flask app is to run it locally. First, open a command-line prompt, navigate to the project’s directory and run the following commands:
 
 ```
 set FLASK_APP=app
+```
+Followed by:
+```
 flask run
+```
+
+Finally, open up a web browser and enter the following URL in the address field:
+```
+http://localhost:5000/
 ```
 
 The `FLASK_APP` environment variable is the name of the module to import at flask run. The `flask` command is installed by Flask; it must be told where to find your application in order to use it. 
