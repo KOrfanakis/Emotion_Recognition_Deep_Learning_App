@@ -42,11 +42,11 @@ In this project, we will create a web app that detects human faces in a frame (i
 
 Facial Emotion Recognition (FER), or simply Emotion Recognition, is the process of detecting displayed human emotions using artificial intelligence based technologies to evaluate non-verbal responses to products, services or goods.
 
-FER enables computer systems to adapt their responses and behavioural patterns according to the emotions of humans, thus making the interaction more natural. One application can be found in an automatic tutoring system, where the system adjusts the level of the tutorial depending on the user's affective state, such as excitement or boredom.
+FER enables computer systems to adapt their responses and behavioural patterns according to the emotions of humans, thus making the interaction more natural. For instance, one application can be found in an automatic tutoring system, where the system adjusts the level of the tutorial depending on the user's affective state, such as excitement or boredom.
 
 Additionally, businesses can use FER to gain additional feedback on products and services. Using facial emotion recognition can aid in understanding which emotions a user is experiencing in real-time. This is an excellent addition to verbal feedback as it provides a more complex review of the user experience.
-Consequently, FER has been an active field of computer vision and has use cases across various industries, such as healthcare, marketing, manufacturing, etc.
 
+Consequently, FER has been an active field of computer vision and has use cases across various industries, such as healthcare, marketing, manufacturing, etc.
 For more information, please refer to articles published in [ScienceDirect](https://www.sciencedirect.com/science/article/pii/B9780128146019000286), [Iflexion](https://www.iflexion.com/blog/emotion-recognition-software), [IT Business Edge](https://www.itbusinessedge.com/business-intelligence/value-emotion-recognition-technology/), and [Sightcorp](https://sightcorp.com/knowledge-base/emotion-recognition/).
 
 <br>
@@ -64,7 +64,7 @@ Our task is to develop a Deep Learning model that implements emotion recognition
 
 ###	1. Building and Training a CNN
 
-This section is performed entirely in the [Jupyter notebook](https://github.com/KOrfanakis/Emotion_Recognition_Deep_Learning_App/blob/main/Emotion_Recognition_Notebook.ipynb) run on Google Colab. It contains the usual steps in training a CNN model: loading the data, performing data augmentation, creating, compiling, and training the model, and using the trained model to make predictions. The dataset used to train the CNN is the FER2013 dataset (more details are provided in the [Data](#data) section). A schematic illustration of the model’s architecture is shown below, while a more detailed summary (as produced by Keras's `summary()` method) is included in the [images](https://github.com/KOrfanakis/Emotion_Recognition_Deep_Learning_App/blob/main/images/CNN_Architecture_Summary.png) folder.
+This section is performed entirely in the [Jupyter notebook](https://github.com/KOrfanakis/Emotion_Recognition_Deep_Learning_App/blob/main/Emotion_Recognition_Notebook.ipynb) run on Google Colab. It contains the usual steps in training a CNN model: loading the data, performing data augmentation, creating, compiling, and training the model, and using the trained model to make predictions. The dataset used to train the CNN is the **`FER2013`** dataset (more details are provided in the [*Data*](#data) section). A schematic illustration of the model’s architecture is shown below, while a more detailed summary (as produced by Keras's `summary()` method) is included in the [*images*](https://github.com/KOrfanakis/Emotion_Recognition_Deep_Learning_App/blob/main/images/CNN_Architecture_Summary.png) folder.
 
 <br>
 
@@ -74,7 +74,7 @@ This section is performed entirely in the [Jupyter notebook](https://github.com/
 
 <br>
 
-The model achieves **approximately 69.5% (validation) accuracy** across all labels/emotions, beating the **baseline human-level accuracy of ~65%**. For a more detailed breakdown of the model's performance, please refer to the [Assessing Performance](https://nbviewer.org/github/KOrfanakis/Emotion_Recognition_Deep_Learning_App/blob/main/Emotion_Recognition_Notebook.ipynb#Assessing-Performance) section of the Jupyter notebook. 
+The model achieves **approximately 69.5% (validation) accuracy** across all labels/emotions, beating the **baseline human-level accuracy of ~65%**. For a more detailed breakdown of the model's performance, please refer to the [*Assessing Performance*](https://nbviewer.org/github/KOrfanakis/Emotion_Recognition_Deep_Learning_App/blob/main/Emotion_Recognition_Notebook.ipynb#Assessing-Performance) section of the Jupyter notebook. 
 
 <br>
 
@@ -86,7 +86,9 @@ This part of the project will be implemented using [Haar Cascades](https://docs.
 
 ### 3. Hosting the App
 
-Lastly, we will use Python’s [Flask](https://flask.palletsprojects.com/en/2.1.x/) web framework to host our application in a browser. For this purpose, the [`app.py`](https://github.com/KOrfanakis/Emotion_Recognition_Deep_Learning_App/blob/main/app.py) file loads the CNN model and the Haar cascade classifier, detects a face and uses the model to predict its emotion. The HTML document used to create the web app is included in the templates folder. Instructions on how to run the web app are provided in the [Running the App](#running-the-app) section.
+Lastly, we will use Python’s [Flask](https://flask.palletsprojects.com/en/2.1.x/) web framework to host our application in a browser. For this purpose, the [`app.py`](https://github.com/KOrfanakis/Emotion_Recognition_Deep_Learning_App/blob/main/app.py) file loads the CNN model and the Haar cascade classifier, detects a face and uses the model to predict its emotion. The HTML document used to create the web app is included in the [*templates*](https://github.com/KOrfanakis/Emotion_Recognition_Deep_Learning_App/tree/main/templates) folder.
+
+Instructions on how to run the web app are provided in the [*Running the App*](#running-the-app) section.
 
 <br>
 
@@ -94,7 +96,7 @@ Lastly, we will use Python’s [Flask](https://flask.palletsprojects.com/en/2.1.
 
 For training and testing the model, we will use the **[`FER2013`](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data)** dataset, a well-studied dataset that has been the subject of many Deep Learning competitions and research papers. The dataset consists of 35,887 images of human faces normalised to 48x48 pixels in grayscale and organised into different folders based on the emotion they depict. There are seven different emotions: *angry*, *disgust*, *fear*, *happy*, *neutral*, *sad*, and *surprise*. Unfortunately, there is a significant imbalance in the dataset, with the *happy* class being the most prevalent and the *disgust* class being noticeably underrepresented.
 
-The dataset is extracted from Kaggle through [this link](jonathanoheix/face-expression-recognition-dataset). Instructions on how to download it and open it with Colab are provided in the [Jupyter notebook](https://nbviewer.org/github/KOrfanakis/Emotion_Recognition_Deep_Learning_App/blob/main/Emotion_Recognition_Notebook.ipynb#Getting-the-Data).
+The dataset is extracted from Kaggle through [this link](jonathanoheix/face-expression-recognition-dataset). Instructions on how to download it and open it with Colab are provided in the [*Getting the Data*](https://nbviewer.org/github/KOrfanakis/Emotion_Recognition_Deep_Learning_App/blob/main/Emotion_Recognition_Notebook.ipynb#Getting-the-Data) section of the Jupyter notebook.
 
 <br>
 
@@ -135,7 +137,7 @@ The main resources for creating this project are:
 
 &emsp;[2] Francois Chollet. [*Deep Learning with Python*](https://www.manning.com/books/deep-learning-with-python). 2nd ed., Manning, 2021.
 
-For a full list of references, please refer to the [References](https://nbviewer.org/github/KOrfanakis/Emotion_Recognition_Deep_Learning_App/blob/main/Emotion_Recognition_Notebook.ipynb#References) section of the Jupyter notebook.
+For a full list of references, please refer to the [*References*](https://nbviewer.org/github/KOrfanakis/Emotion_Recognition_Deep_Learning_App/blob/main/Emotion_Recognition_Notebook.ipynb#References) section of the Jupyter notebook.
 
 <br>
 
