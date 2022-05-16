@@ -66,7 +66,16 @@ Our task is to develop a Deep Learning model that implements emotion recognition
 
 ###	1. Building and Training a CNN
 
-This section is performed entirely in the [Jupyter notebook](https://github.com/KOrfanakis/Emotion_Recognition_Deep_Learning_App/blob/main/Emotion_Recognition_Notebook.ipynb) run on Google Colab. It contains the usual steps in training a CNN model: loading the data, performing data augmentation, creating, compiling, and training the model, and using the trained model to make predictions. The dataset used to train the CNN is the **`FER2013`** dataset (more details are provided in the [*Data*](#data) section). A schematic illustration of the model’s architecture is shown below, while a more detailed summary (as produced by Keras's `summary()` method) is included in the [*images*](https://github.com/KOrfanakis/Emotion_Recognition_Deep_Learning_App/blob/main/images/CNN_Architecture_Summary.png) folder.
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/KOrfanakis/Emotion_Recognition_Deep_Learning_App/blob/main/Emotion_Recognition_Notebook.ipynb)
+
+This section is performed entirely in the [Jupyter notebook](https://github.com/KOrfanakis/Emotion_Recognition_Deep_Learning_App/blob/main/Emotion_Recognition_Notebook.ipynb) run on Google Colab. It contains the usual steps in training a CNN model:
+
+- Loading the data, 
+- Performing data augmentation, 
+- Creating, compiling, and training the model, and 
+- Using the trained model to make predictions.
+
+The dataset used to train the CNN is the **`FER2013`** dataset (more details are provided in the [*Data*](#data) section). A schematic illustration of the model’s architecture, created using the [visualkeras](https://github.com/paulgavrikov/visualkeras) library, is shown below. A more detailed summary (as produced by Keras's `summary()` method) is included in the [*images*](https://github.com/KOrfanakis/Emotion_Recognition_Deep_Learning_App/blob/main/images/CNN_Architecture_Summary.png) folder.
 
 <br>
 
@@ -98,7 +107,7 @@ Instructions on how to run the web app are provided in the [*Running the App*](#
 
 For training and testing the model, we will use the **[`FER2013`](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data)** dataset, a well-studied dataset that has been the subject of many Deep Learning competitions and research papers. The dataset consists of 35,887 images of human faces normalised to 48x48 pixels in grayscale and organised into different folders based on the emotion they depict. There are seven different emotions: *angry*, *disgust*, *fear*, *happy*, *neutral*, *sad*, and *surprise*. Unfortunately, there is a significant imbalance in the dataset, with the *happy* class being the most prevalent and the *disgust* class being noticeably underrepresented.
 
-The dataset is extracted from Kaggle through [this link](jonathanoheix/face-expression-recognition-dataset). Instructions on how to download it and open it with Colab are provided in the [*Getting the Data*](https://nbviewer.org/github/KOrfanakis/Emotion_Recognition_Deep_Learning_App/blob/main/Emotion_Recognition_Notebook.ipynb#Getting-the-Data) section of the Jupyter notebook.
+The dataset is extracted from Kaggle through [this link](https://www.kaggle.com/jonathanoheix/face-expression-recognition-with-deep-learning). Instructions on how to download it and open it with Colab are provided in the [*Getting the Data*](https://nbviewer.org/github/KOrfanakis/Emotion_Recognition_Deep_Learning_App/blob/main/Emotion_Recognition_Notebook.ipynb#Getting-the-Data) section of the Jupyter notebook.
 
 <br>
 
