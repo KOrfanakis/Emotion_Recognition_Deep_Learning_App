@@ -30,6 +30,8 @@ In this project, we will create a web app that detects human faces in a frame (i
 - Implementing face detection using OpenCV
 - Hosting the app in a browser using Flask
 
+You can view a demonstration of the web app: [<img src='https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg' width="40" align="center">](https://www.youtube.com/watch?v=SIfTLlqHSbc&feature=youtu.be)
+
 <br>
 
 **→ Skills**: *Image Classification with Convolutional Neural Networks, Computer Vision (Face Detection), Model Deployment, Data Visualisation, Data Augmentation* <br>
@@ -124,6 +126,8 @@ http://localhost:5000/
 ```
 
 A more detailed explanation of how to run a Flask app is provided in Flask’s [Quickstart guide](https://flask.palletsprojects.com/en/2.1.x/quickstart/).
+
+Moreover, our Flask app can be deployed online to the [Heroku platform]( https://realpython.com/flask-by-example-part-1-project-setup/), which is something that I will try doing in a future version of this project. 
 
 <br>
 
