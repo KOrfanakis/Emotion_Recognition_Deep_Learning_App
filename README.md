@@ -46,7 +46,7 @@ Facial Emotion Recognition (FER), or simply Emotion Recognition, is the process 
 
 FER enables computer systems to adapt their responses and behavioural patterns according to the emotions of humans, thus making the interaction more natural. For instance, one application can be found in an automatic tutoring system, where the system adjusts the level of the tutorial depending on the user's affective state, such as excitement or boredom.
 
-Additionally, businesses can use FER to gain additional feedback on products and services. Using facial emotion recognition can aid in understanding which emotions a user is experiencing in real-time. This is an excellent addition to verbal feedback as it provides a more complex review of the user experience.
+Additionally, businesses can use FER to gain additional feedback on products and services, as FER can aid in understanding which emotions a user is experiencing in real-time. This is an excellent addition to verbal feedback as it provides a more complex review of the user experience.
 
 Consequently, FER has been an active field of computer vision and has use cases across various industries, such as healthcare, marketing, manufacturing, etc.
 For more information, please refer to articles published in [ScienceDirect](https://www.sciencedirect.com/science/article/pii/B9780128146019000286), [Iflexion](https://www.iflexion.com/blog/emotion-recognition-software), [IT Business Edge](https://www.itbusinessedge.com/business-intelligence/value-emotion-recognition-technology/), and [Sightcorp](https://sightcorp.com/knowledge-base/emotion-recognition/).
@@ -55,7 +55,7 @@ For more information, please refer to articles published in [ScienceDirect](http
 
 ## Business Objective
 
-Imagine that we are hired as data scientists by an advertising company, specialising in electronic boards at football matches. The company wants to develop software that detects fans’ faces, estimates their emotion, and adjusts ads based on collective emotion.
+Imagine that we are hired as data scientists by an advertising company that specialises in electronic boards at football matches. The company wants to develop software that detects fans’ faces, estimates their emotion, and adjusts ads based on collective emotion.
 
 Our task is to develop a Deep Learning model that implements emotion recognition and integrate it with a face detection algorithm. The final product shall be delivered as a web application that accepts live video as input. The company will then integrate our product with their systems for automatic ad renewal according to the change of emotions during football games.
 
@@ -70,12 +70,12 @@ Our task is to develop a Deep Learning model that implements emotion recognition
 
 This section is performed entirely in the [Jupyter notebook](https://github.com/KOrfanakis/Emotion_Recognition_Deep_Learning_App/blob/main/Emotion_Recognition_Notebook.ipynb) run on Google Colab. It contains the usual steps in training a CNN model:
 
-- Loading the data, 
-- Performing data augmentation, 
-- Creating, compiling, and training the model, and 
-- Using the trained model to make predictions.
+- Loading the data
+- Performing data augmentation
+- Creating, compiling, and training the model
+- Using the trained model to make predictions
 
-The dataset used to train the CNN is the **`FER2013`** dataset (more details are provided in the [*Data*](#data) section). A schematic illustration of the model’s architecture, created using the [visualkeras](https://github.com/paulgavrikov/visualkeras) library, is shown below. A more detailed summary (as produced by Keras's `summary()` method) is included in the [*images*](https://github.com/KOrfanakis/Emotion_Recognition_Deep_Learning_App/blob/main/images/CNN_Architecture_Summary.png) folder.
+The dataset used to train the CNN is the **`FER2013`** dataset (more details are provided in the [*Data*](#data) section). A schematic illustration of the model’s architecture, created using the [visualkeras](https://github.com/paulgavrikov/visualkeras) library, is shown below. A more detailed summary (as produced by Keras' `summary()` method) is included in the [*images*](https://github.com/KOrfanakis/Emotion_Recognition_Deep_Learning_App/blob/main/images/CNN_Architecture_Summary.png) folder.
 
 <br>
 
@@ -107,7 +107,7 @@ Instructions on how to run the web app are provided in the [*Running the App*](#
 
 For training and testing the model, we will use the **[`FER2013`](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data)** dataset, a well-studied dataset that has been the subject of many Deep Learning competitions and research papers. The dataset consists of 35,887 images of human faces normalised to 48x48 pixels in grayscale and organised into different folders based on the emotion they depict. There are seven different emotions: *angry*, *disgust*, *fear*, *happy*, *neutral*, *sad*, and *surprise*. Unfortunately, there is a significant imbalance in the dataset, with the *happy* class being the most prevalent and the *disgust* class being noticeably underrepresented.
 
-The dataset is extracted from Kaggle through [this link](https://www.kaggle.com/jonathanoheix/face-expression-recognition-with-deep-learning). Instructions on how to download it and open it with Colab are provided in the [*Getting the Data*](https://nbviewer.org/github/KOrfanakis/Emotion_Recognition_Deep_Learning_App/blob/main/Emotion_Recognition_Notebook.ipynb#Getting-the-Data) section of the Jupyter notebook.
+The dataset is extracted from Kaggle through [this link](https://www.kaggle.com/jonathanoheix/face-expression-recognition-with-deep-learning). Instructions on downloading it and opening it with Colab are provided in the [*Getting the Data*](https://nbviewer.org/github/KOrfanakis/Emotion_Recognition_Deep_Learning_App/blob/main/Emotion_Recognition_Notebook.ipynb#Getting-the-Data) section of the Jupyter notebook.
 
 <br>
 
